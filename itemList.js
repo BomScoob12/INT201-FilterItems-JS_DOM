@@ -1,39 +1,18 @@
 import { products } from './data/products.js'
-
+//65130500083 Sarawit Kraukham
 function itemList(userItems) {
   const items = userItems
 
-  const initialPage = () => {
-    const inputItem = document.querySelector('input')
-    inputItem.addEventListener('keydown', filterItemsHandler)
-    showItems(items)
-    console.log(inputItem)
-  }
+  function initialPage() {}
 
-  const filterItemsHandler = (event) => {
-    const inputI = document.querySelector('input')
-    const aryFind = items.filter((e) => e.keywords.toLowerCase().includes((`${inputI.value}`).toLowerCase()))
-    showItems(aryFind)
-  }
+  function filterItemsHandler() {}
 
-  const showItems = (items) => {
-    const aryRecieve = items
-    const ulParent = document.getElementById('items')
-    ulParent.textContent = ''
-    for (let i = 0; i < aryRecieve.length; i++) {
-      const liItem = document.createElement('li')
-      liItem.textContent = `ID:${aryRecieve[i].id}, NAME:${aryRecieve[i].name}, KEYWORDS:${aryRecieve[i].keywords}`
-      ulParent.appendChild(liItem)
-    }
-  }
+  function showItems() {}
 
   return {
     initialPage,
     filterItemsHandler,
-    showItems
+    showItems,
   }
 }
 export { itemList }
-const { initialPage, filterItemsHandler, showItems } = itemList(products)
-initialPage()
-

@@ -1,7 +1,6 @@
-import { itemList } from "./itemList.js";
+//65130500083 Sarawit Kraukham
+import { itemList } from './itemList.js'
+import { products } from './data/products.js'
 
-const { initialPage,
-    filterItemsHandler,
-    showItems } = itemList()
-
-
+const manageItem = itemList(products)
+manageItem.initialPage()
