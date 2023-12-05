@@ -19,6 +19,8 @@ function itemList(userItems) {
   function showItems(items) {
     const ulParent = document.querySelector('#items')
     const arrayItems = items
+    //* reset ul element for filter value only
+    ulParent.textContent = ''
     for(let i = 0; i<arrayItems.length; i++){
       const listElement = document.createElement('li')
       listElement.innerText = `ID:${arrayItems[i].id}, Name:${arrayItems[i].name}, Keyword:${arrayItems[i].keywords}`
