@@ -3,11 +3,28 @@ import { products } from './data/products.js'
 function itemList(userItems) {
   const items = userItems
 
-  function initialPage() {}
+  function initialPage() {
+    //binding event listener
+    const inputElement = document.querySelector('input')
+    inputElement.addEventListener('input', filterItemsHandler)
+    showItems(items)
+  }
 
-  function filterItemsHandler() {}
+  function filterItemsHandler(e) {
+    const inputValue = e.target.value
+    const filterItems = items.filter((item)=> (item.keywords.toLowerCase().includes(inputValue.toLowerCase())))
+    showItems(filterItems)
+  }
 
-  function showItems() {}
+  function showItems(items) {
+    const ulParent = document.querySelector('#items')
+    const arrayItems = items
+    for(let i = 0; i<arrayItems.length; i++){
+      const listElement = document.createElement('li')
+      listElement.innerText = `ID:${arrayItems[i].id}, Name:${arrayItems[i].name}, Keyword:${arrayItems[i].keywords}`
+      ulParent.appendChild(listElement)
+    }
+  }
 
   return {
     initialPage,
