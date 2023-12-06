@@ -1,4 +1,3 @@
-import { products } from './data/products.js'
 //65130500083 Sarawit Kraukham
 function itemList(userItems) {
   const items = userItems
@@ -23,7 +22,7 @@ function itemList(userItems) {
     ulParent.textContent = ''
     for(let i = 0; i<arrayItems.length; i++){
       const listElement = document.createElement('li')
-      listElement.innerText = `ID:${arrayItems[i].id}, Name:${arrayItems[i].name}, Keyword:${arrayItems[i].keywords}`
+      listElement.textContent = `ID:${arrayItems[i].id}, NAME:${arrayItems[i].name}, KEYWORDS:${arrayItems[i].keywords}`
       ulParent.appendChild(listElement)
     }
   }
@@ -34,4 +33,4 @@ function itemList(userItems) {
     showItems,
   }
 }
-export { itemList }
+module.exports = itemList
