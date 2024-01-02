@@ -1,4 +1,3 @@
-### //credit skeleton repo https://github.com/Sitthata/int201-js-last-year-exam/tree/master
 # LAB Exam: Instruction
 
 \*\*\*Write your student id, firstname, and lastname in a single line comment before starting your program, students who do not put this comment will get 50% taken off their score.\*\*\*
